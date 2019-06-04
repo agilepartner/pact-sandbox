@@ -1,4 +1,0 @@
-Reste à faire :
-- Comprendre pourquoi le contrat Client5 contient les autres contrats
-	- Split 1 client / 1 projet ?
-- Embarquer la db dans un container
