@@ -1,12 +1,25 @@
 version: "3"
 
 services:
+  postgres:
+    image: postgres
+    healthcheck:
+      test: psql postgres --command "select 1" -U postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: pact-broker
+      POSTGRES_PASSWORD: j%M950*Gij@P
+      POSTGRES_DB: broker
+      
   broker_app:
     image: dius/pact-broker
+    links:
+      - postgres
     environment:
       PACT_BROKER_DATABASE_USERNAME: pact-broker
       PACT_BROKER_DATABASE_PASSWORD: j%M950*Gij@P
-      PACT_BROKER_DATABASE_HOST: 192.168.1.58
+      PACT_BROKER_DATABASE_HOST: postgres
       PACT_BROKER_DATABASE_NAME: broker
     ports:
       - "80:80"
