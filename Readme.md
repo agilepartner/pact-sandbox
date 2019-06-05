@@ -110,3 +110,6 @@ The broker can be accessed at http://localhost/
 * Then you can browse dependencies graph
 
 ![dependencies graph](images/graph.png)
+
+In other languages :
+* [js](https://github.com/lucasmajerowicz/pact-node-example/blob/master/app/client/spec/PostServiceClient.spec.js)
