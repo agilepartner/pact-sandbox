@@ -113,3 +113,5 @@ xcuserdata
 # # Node
 node_modules
 pacts/
+package-lock.json
+node_modules

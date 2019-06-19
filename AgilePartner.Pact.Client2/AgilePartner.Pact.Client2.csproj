@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -13,11 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AgilePartner.Pact.Lib\AgilePartner.Pact.Lib.csproj" />
+    <Folder Include="pacts\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="pacts\" />
+    <ProjectReference Include="..\AgilePartner.Pact.Lib\AgilePartner.Pact.Lib.csproj" />
   </ItemGroup>
 
 </Project>

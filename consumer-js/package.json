@@ -1,0 +1,17 @@
+{
+  "name": "js-consumer",
+  "version": "1.0.0",
+  "description": "Mocha Pact example",
+  "main": "index.js",
+  "scripts": {
+    "test": "rimraf pacts && mocha"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@pact-foundation/pact": "^8.2.6",
+    "axios": "^0.14.0",
+    "chai": "^3.5.0",
+    "mocha": "^5.1.1",
+    "rimraf": "^2.6.2"
+  }
+}

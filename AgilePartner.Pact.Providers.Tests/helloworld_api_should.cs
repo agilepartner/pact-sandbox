@@ -61,5 +61,11 @@ namespace AgilePartner.Pact.Providers.Tests
         {
             VerifyContractWithConsumer("Client5");
         }
+
+        [Fact]
+        public void respect_its_contract_with_js_consumer()
+        {
+            VerifyContractWithConsumer("consumer-js");
+        }
     }
 }
