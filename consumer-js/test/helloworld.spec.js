@@ -6,8 +6,8 @@ const { Pact } = require('@pact-foundation/pact');
 const { helloworldv2 } = require("../index");
 
 describe("The Helloworld API", () => {
-  let url = "http://localhost"
-  const port = 8992
+  let url = "http://localhost";
+  const port = 8992;
   const contractPath = path.resolve(process.cwd(), "pacts");
 
   const provider = new Pact({
@@ -20,20 +20,20 @@ describe("The Helloworld API", () => {
     pactfileWriteMode: "merge",
     publishPacts: true,
     publishVerificationResult: true
-  })
+  });
 
   const EXPECTED_BODY = {
     message: "Hello world v2"
-  }
+  };
 
   // Setup the provider
-  before(() => provider.setup())
+  before(() => provider.setup());
 
   // Write Pact when all tests done
-  after(() => provider.finalize())
+  after(() => provider.finalize());
 
   // verify with Pact, and reset expectations
-  afterEach(() => provider.verify())
+  afterEach(() => provider.verify());
 
   describe("get /api/v2.0/helloworld", () => {
     before(done => {
@@ -54,8 +54,8 @@ describe("The Helloworld API", () => {
       }
       provider.addInteraction(interaction).then(() => {
         done()
-      })
-    })
+      });
+    });
 
     it("returns the correct response", done => {
       const urlAndPort = {
