@@ -111,5 +111,30 @@ The broker can be accessed at http://localhost/
 
 ![dependencies graph](images/graph.png)
 
+## Webhook
+Here is the documentation [Create webhook](https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown)
+
+### Create a webhook
+```
+{
+  "provider": {
+    "name": "HelloWorld"
+  },
+  "events": [{
+    "name": "contract_content_changed"
+  }],
+  "request": {
+    "method": "POST",
+    "url": "https://hooks.slack.com/services/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",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": {
+      "text" : "Contract for provider HelloWorld has been updated."
+    }
+  }
+}
+```
+
 In other languages :
 * [js](https://github.com/lucasmajerowicz/pact-node-example/blob/master/app/client/spec/PostServiceClient.spec.js)
