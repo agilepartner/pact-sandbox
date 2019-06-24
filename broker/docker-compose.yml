@@ -4,7 +4,7 @@ services:
   postgres:
     image: postgres
     healthcheck:
-      test: psql postgres --command "select 1" -U postgres
+      test: psql postgres --command "select 1" -U pact-broker
     ports:
       - "5432:5432"
     environment:
